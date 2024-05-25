@@ -1,0 +1,4 @@
+[submodule "flutter_draw9patch"]
+	path = flutter_draw9patch
+	url = https://github.com/Sprheany/flutter_draw9patch.git
+	branch = dev

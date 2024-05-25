@@ -1,0 +1,57 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "editor": "Editor"
+  },
+  "Home": {
+    "title": "9 Patch Editor - An online WYSIWYG tool to create 9 patch images",
+    "description": "The 9 Patch Editor is an online WYSIWYG tool similar to the one included in Android Studio. The tool lets you create bitmap images that automatically resize to accommodate the contents of the view and the size of the screen. You can scale selected parts of the image horizontally or vertically based on indicators drawn within the image.",
+    "try": "Try it now!",
+    "use": {
+      "title": "How to use",
+      "description": "Follow these steps to create a NinePatch graphic using the 9 Patch Editor. You'll need an image that you'd like to create a NinePatch image from.",
+      "1": {
+        "title": "Click the <strong>Select image</strong> button or drag the image into the editor that you want to create a NinePatch image from.",
+        "description": "In the workspace that opens, the center pane is your drawing area, where you can edit the lines for the stretchable patches and content area. The right pane is the preview area, where you can preview your graphic when stretched."
+      },
+      "2": {
+        "title": "Change image name for your NinePatch image. Your image will be saved with the <code>.9.png</code> file extension.",
+        "description": ""
+      },
+      "3": {
+        "title": "Click within the 1-pixel perimeter to draw the lines that define the stretchable patches and (optional) the content area.",
+        "description": ""
+      },
+      "4": {
+        "title": "When done, click the <strong>Save image</strong> button to save your changes.",
+        "description": ""
+      },
+      "content": " To make sure that your NinePatch graphics scale down properly, verify that any stretchable regions are at least 2x2 pixels in size. Otherwise, those regions may disappear when scaled down. To avoid interpolation during scaling that may cause the color at the boundaries to change, provide 1 pixel of extra safe space in the graphics before and after stretchable regions.",
+      "note": "<strong>Note:</strong> A normal PNG file (<code>*.png</code>) is loaded with an empty 1-pixel border added around the image. You can draw the stretchable patches and content area within the border. A previously saved NinePatch file (<code>*.9.png</code>) is loaded as-is, with no drawing area added because it already exists.",
+      "image": "<strong>Figure 1.</strong> 9 Patch Editor displaying a NinePatch image."
+    },
+    "options": {
+      "title": "Optional controls",
+      "1": "<strong>Zoom</strong>: Adjust the zoom level of the graphic in the drawing area.",
+      "2": "<strong>Patch scale</strong>: Adjust the scale of the images in the preview area.",
+      "3": "<strong>Show lock</strong>: Visualize the non-drawable area of the graphic on mouse-over.",
+      "4": "<strong>Show patches</strong>: Preview the pink stretchable patches in the drawing area. Pink indicates a stretchable patch, as shown in figure 2.",
+      "5": "<strong>Show content</strong>: Highlight the content area in the preview images. Purple indicates the area where content is allowed, as shown in figure 2.",
+      "6": "<strong>Show bad patches</strong>: Adds a red border around patch areas that may produce artifacts in the graphic when stretched, as shown in figure 2. If you eliminate all bad patches, you will maintain the visual coherence of your stretched image.",
+      "image": "<strong>Figure 2.</strong> A NinePatch image in editor showing content, patches, and bad patches."
+    },
+    "links": "Links:",
+    "reserved": "All rights reserved."
+  },
+  "Metadata": {
+    "home": {
+      "title": "9 Patch Editor - An online WYSIWYG tool to create 9 patch images",
+      "description": "Easily turn any bitmap into a 9 patch image with this awesome online WYSIWYG tool. Quickly make stretchable bitmap images for flexible UIs. Try this tool now!",
+      "keywords": "9-patch,9patch,.9.png,.9 png,9 patch online,9 patch generator,flutter web ui,.9图,点9图,draw9patch,NinePatch,NinePatchChunk,NinePatchDrawable,WYSIWYG editor"
+    },
+    "editor": {
+      "title": "9 Patch Editor",
+      "description": "An awesome online WYSIWYG tool for creating 9 patch images built with Flutter."
+    }
+  }
+}
