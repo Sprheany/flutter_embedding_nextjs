@@ -1,9 +1,12 @@
 import Header from "@/components/header";
+import FlutterScript from "@/components/scripts/flutter-script";
+import GoogleScript from "@/components/scripts/google-script";
+import MicrosoftScript from "@/components/scripts/microsoft-script";
+import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { Inter, Roboto_Mono } from "next/font/google";
-import Script from "next/script";
 import "../globals.css";
 
 export const inter = Inter({ subsets: ["latin"] });
@@ -38,7 +41,10 @@ export default async function RootLayout({
             </div>
           </ThemeProvider>
         </NextIntlClientProvider>
-        <Script src="/flutter/flutter.js" defer strategy="beforeInteractive" />
+        <FlutterScript />
+        <Analytics />
+        <GoogleScript />
+        <MicrosoftScript />
       </body>
     </html>
   );
