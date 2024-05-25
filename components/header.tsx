@@ -34,7 +34,7 @@ const Header = () => {
           <ThemeModeToggle />
           <Button variant="ghost" size="icon" asChild>
             <Link
-              href="https://github.com/Sprheany/flutter_draw9patch"
+              href="https://github.com/Sprheany/flutter_embedding_nextjs"
               target="_blank"
             >
               <GithubIcon className="w-5 h-5" />

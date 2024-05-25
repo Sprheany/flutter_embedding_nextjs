@@ -2,7 +2,9 @@
 
 Contains examples of how to embed Flutter in Nextjs
 
-Developed to [https://flutter-nextjs.vercel.app/](https://flutter-nextjs.vercel.app/)
+Developed to [https://www.9patch.online](https://www.9patch.online)
+
+Flutter project: [flutter_draw9patch](https://github.com/sprheany/flutter_draw9patch) (Branch: `dev`)
 
 ## How to build
 
