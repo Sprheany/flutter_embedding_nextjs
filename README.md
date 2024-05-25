@@ -1,25 +1,59 @@
-# 9 Patch Editor
+# flutter_embedding_nextjs
 
-A tool that provides similar features to editing 9 patch images in Android Studio.
+Contains examples of how to embed Flutter in Nextjs
 
-![Hero Image](public/images/hero.webp)
+Developed to [https://flutter-nextjs.vercel.app/](https://flutter-nextjs.vercel.app/)
 
-## Environment
+## How to build
+
+### Requirements
 
 ```console
-➜  ~ % flutter --version
+$ node -v
+v21.7.3
+
+$ flutter --version
 Flutter 3.19.6 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision 54e66469a9 (5 weeks ago) • 2024-04-17 13:08:03 -0700
 Engine • revision c4cd48e186
 Tools • Dart 3.3.4 • DevTools 2.31.1
-➜  ~ % flutter doctor
-Doctor summary (to see all details, run flutter doctor -v):
-[✓] Flutter (Channel stable, 3.22.0, on macOS 14.5 23F79 darwin-arm64 (Rosetta), locale zh-Hans-CN)
-[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
-[✓] Xcode - develop for iOS and macOS (Xcode 15.4)
-[✓] Chrome - develop for the web
-[✓] Android Studio (version 2023.3)
-[✓] VS Code (version 1.89.1)
-[✓] Connected device (2 available)
-[✓] Network resources
 ```
+
+If you have flutter in your system, please modify `package.json`'s `prebuild` script to replace `flutter/bin/flutter` with your `flutter` environment variable.
+
+If you don't have flutter in your system, you can install flutter by running the following command.
+
+```console
+$ npm run installFlutter
+```
+
+### Build the app
+
+First fetch its `npm` dependencies.
+
+```console
+$ npm install
+```
+
+Then run the `build` script. It will build the Flutter automatically:
+
+```console
+$ npm run build
+
+> flutter_draw9patch_webui@0.1.0 prebuild
+
+... Flutter web build output ...
+
+Compiling lib/main.dart for the Web...
+
+> flutter_draw9patch_webui@0.1.0 build
+> next build
+
+... Nextjs build output ...
+
+Compiled successfully.
+```
+
+## Thanks
+
+- [cra-flutter](https://github.com/p-mazhnik/flutter-embedding/tree/main/cra-flutter)
