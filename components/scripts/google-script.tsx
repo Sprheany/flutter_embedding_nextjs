@@ -1,12 +1,9 @@
+import { GOOGLE_ANALYTICS_ID } from "@/lib/env";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const GoogleScript = () => {
   return (
-    <>
-      {process.env.GOOGLE_ANALYTICS_ID && (
-        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID} />
-      )}
-    </>
+    <>{GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />}</>
   );
 };
 
