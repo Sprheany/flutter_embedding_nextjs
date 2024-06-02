@@ -11,17 +11,6 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: "./",
-    },
-    appleWebApp: {
-      title: t("title"),
-      capable: true,
-      statusBarStyle: "black",
-    },
-    icons: {
-      apple: "/flutter/icons/icon-192.png",
-    },
   };
 }
 

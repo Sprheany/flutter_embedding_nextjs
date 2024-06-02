@@ -2,9 +2,11 @@ import Header from "@/components/header";
 import FlutterScript from "@/components/scripts/flutter-script";
 import GoogleScript from "@/components/scripts/google-script";
 import MicrosoftScript from "@/components/scripts/microsoft-script";
+import { BASE_URL } from "@/lib/env";
 import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "../globals.css";
@@ -16,6 +18,41 @@ export const roboto_mono = Roboto_Mono({
   display: "swap",
   variable: "--font-roboto-mono",
 });
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: "Metadata.home" });
+  return {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: "./",
+    },
+    appleWebApp: {
+      title: t("title"),
+      capable: true,
+      statusBarStyle: "black",
+    },
+    icons: {
+      apple: "/flutter/icons/icon-192.png",
+    },
+    openGraph: {
+      url: "./",
+      type: "website",
+      title: t("title"),
+      description: t("description"),
+      images: "/images/hero.webp",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: "/images/hero.webp",
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

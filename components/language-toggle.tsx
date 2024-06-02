@@ -24,6 +24,7 @@ export function LanguageToggle() {
           variant="outline"
           size="sm"
           role="combobox"
+          title="Change language"
           aria-expanded={open}
         >
           <span>{languages.find((l) => l.lang === locale)?.label}</span>

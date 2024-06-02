@@ -1,6 +1,7 @@
 import ImageWrapper from "@/components/image-wrapper";
 import { Button } from "@/components/ui/button";
 import { languages } from "@/i18n";
+import { BASE_URL } from "@/lib/env";
 import { range } from "@/lib/utils";
 import { Link } from "@/navigation";
 import { Metadata } from "next";
@@ -14,33 +15,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Metadata.home" });
   return {
+    metadataBase: new URL(BASE_URL),
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    alternates: {
-      canonical: "./",
-    },
-    appleWebApp: {
-      title: t("title"),
-      capable: true,
-      statusBarStyle: "black",
-    },
-    icons: {
-      apple: "/flutter/icons/icon-192.png",
-    },
-    openGraph: {
-      url: "./",
-      type: "website",
-      title: t("title"),
-      description: t("description"),
-      images: "/images/hero.webp",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: "/images/hero.webp",
-    },
   };
 }
 
@@ -163,14 +141,14 @@ export default function Home() {
         <div className="flex space-x-2">
           <span>{t("links")}</span>
           <Link
-            className="underline hover:text-sky-500"
+            className="underline hover:text-sky-700"
             href="https://developer.android.com/guide/topics/graphics/2d-graphics#nine-patch"
             target="_blank"
           >
             NinePatch
           </Link>
           <Link
-            className="underline hover:text-sky-500"
+            className="underline hover:text-sky-700"
             href="https://developer.android.com/studio/write/draw9patch"
             target="_blank"
           >
@@ -179,7 +157,7 @@ export default function Home() {
         </div>
         <div className="flex space-x-2">
           <span>© 2023-{new Date().getFullYear().toString()}</span>
-          <Link className="underline hover:text-sky-500" href="/">
+          <Link className="underline hover:text-sky-700" href="/">
             9PATCH.ONLINE
           </Link>
           <span>{t("reserved")}</span>
@@ -188,7 +166,7 @@ export default function Home() {
           {languages.map((language) => (
             <Link
               key={language.lang}
-              className="text-sky-500 hover:text-sky-700"
+              className="text-sky-700 dark:text-sky-500 hover:opacity-90"
               href="/"
               locale={language.lang}
             >

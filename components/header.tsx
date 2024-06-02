@@ -36,6 +36,7 @@ const Header = () => {
             <Link
               href="https://github.com/Sprheany/flutter_embedding_nextjs"
               target="_blank"
+              aria-label="GitHub"
             >
               <GithubIcon className="w-5 h-5" />
             </Link>
